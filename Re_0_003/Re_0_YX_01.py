@@ -1,5 +1,6 @@
 import sys
 import math
+import random
 import pygame
 from pygame.locals import *
 
@@ -128,6 +129,52 @@ while True:
 
 pygame.init()
 screen = pygame.display.set_mode((600,500))
+pygame.display.set_caption(" TuoYuan ")
+
+while True:
+    for event in pygame.event.get():
+        if event.type in (QUIT, KEYDOWN):
+            sys.exit()
+
+    screen.fill((0,0,200))
+
+    # Tuo Yuan
+    rect = (200,150,200,100)
+    color = 0, 255,255
+    pygame.draw.ellipse(screen, color, rect, 1)
+    pygame.display.update()
+
+''' # 绘制 椭圆
+
+'''
+
+pygame.init()
+screen = pygame.display.set_mode((600,500))
+pygame.display.set_caption("DuoTiao Lines")
+a = 0
+
+while True:
+    for event in pygame.event.get():
+        if event.type in (QUIT, KEYDOWN):
+            sys.exit()
+
+    while a < 100:
+        # Hui Zhi Duo Tiao Zhi Xian
+        a = a + 1
+        color = 100, 255, 200
+        whdth = 4
+        pygame.draw.line(screen, color, (random.randint(0, 600), random.randint(0, 500)),
+                         (random.randint(0, 600), random.randint(0, 500)), whdth)
+
+        print(a)
+        pygame.display.update()
+
+''' # 绘制 100条 直线
+
+'''
+
+pygame.init()
+screen = pygame.display.set_mode((600,500))
 pygame.display.set_caption("The Pie Game -Press 1,2,3,4")
 myfont = pygame.font.Font(None,60)
 
@@ -207,6 +254,21 @@ while True:
     pygame.display.update()
 
 ''' # Pie 游戏
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
