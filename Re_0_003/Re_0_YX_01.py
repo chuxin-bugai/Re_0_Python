@@ -124,6 +124,8 @@ while True:
 
 ''' # 绘制 曲线
 
+'''
+
 pygame.init()
 screen = pygame.display.set_mode((600,500))
 pygame.display.set_caption("The Pie Game -Press 1,2,3,4")
@@ -203,6 +205,10 @@ while True:
         color = 0,255,0
 
     pygame.display.update()
+
+''' # Pie 游戏
+
+
 
 
 
